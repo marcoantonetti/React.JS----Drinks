@@ -1,0 +1,13 @@
+#cart-widget{
+    color: gold;
+    cursor: pointer;
+}
+
+.fa-cocktail{
+    color: white;
+}
+
+#navbarScroll{
+    grid-gap: 10px;
+
+}
