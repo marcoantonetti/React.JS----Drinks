@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React, { Component, useState } from 'react'
 import NavBar from './Components/NavBar/NavBar';
-import ItemListConteiner from './Components/landingPage/ItemListConteiner';
+import ItemListConteiner from './Components/ItemsCatalogo/ItemListConteiner';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 

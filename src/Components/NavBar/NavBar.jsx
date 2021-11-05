@@ -11,7 +11,7 @@ import './NavBar.css'
 
 export default function NavBar() {
   return (
-    <Navbar bg="dark" expand="lg" variant='dark'>
+    <Navbar bg="dark" expand="lg" variant='dark' className='letras'>
     <Container fluid>
     <Navbar.Brand href="#">Drinks</Navbar.Brand>
     <i class="fas fa-cocktail"></i>

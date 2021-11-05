@@ -1,0 +1,2 @@
+Al hacer click en las nav bar items que acceda a toda la categoria. Si clickeo cervezas salen todas
+Pero si solo hago hover se activa el dropdown y luego puedo clickear las subcategorias

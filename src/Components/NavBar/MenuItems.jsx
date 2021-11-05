@@ -1,9 +1,9 @@
 
 export const dropdowns = [
     {title: 'Cervezas',
-    href1 : 'Honey',
-    href2:'Ipa',
-    href3:'Lager'},
+    href1 : 'Industriales',
+    href2:'Artesanales',
+    href3:'Importadas  '},
 
     {title:'Vinos',
     href1 : 'Tintos',
