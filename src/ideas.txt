@@ -1,2 +1,11 @@
 Al hacer click en las nav bar items que acceda a toda la categoria. Si clickeo cervezas salen todas
 Pero si solo hago hover se activa el dropdown y luego puedo clickear las subcategorias
+
+
+Que en detalle de producto pueda elegir el Litro. El precio estara prederteminado para xL.
+Al clicear en comprar en el detalle puedo variar el L y el precio asociado con el.
+
+Al pedo hacer otra promise en itemdetail. Desps de entregar sacalo y usa el mismo fectch de itemlistconteiner
+
+Al clikear la foto que aparezca un modal del item con informacion del item
+Al clickear comprar que se vaya al carrito de ese item

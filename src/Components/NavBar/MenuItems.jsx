@@ -1,37 +1,47 @@
-
+import { Badge } from "react-bootstrap"
 export const dropdowns = [
     {title: 'Cervezas',
-    href1 : 'Industriales',
-    href2:'Artesanales',
-    href3:'Importadas  '},
+    subcategoria:'Todas las Cervezas',
+    subcategoria1 :'Industriales',
+    subcategoria2:'Artesanales',
+    subcategoria3:'Importadas',
+    id:'1'},
 
     {title:'Vinos',
-    href1 : 'Tintos',
-    href2:'Blancos',
-    href3:'Mixtos'},
+    subcategoria:'Todos los Vinos',
+    subcategoria1 :'Tintos',
+    subcategoria2:'Blancos',
+    subcategoria3:'Mixtos',
+    id:'2'},
 
     {title:'Espumantes',
-    href1 : 'Rose',
-    href2:'Champagne',
-    href3:'Sidras'},
+    subcategoria:'Todos los Espumantes',
+    subcategoria1 :'Rose',
+    subcategoria2:'Champagne',
+    subcategoria3:'Sidras',
+    id:'3' },
 
     {title:'Destilados',
-    href1 : 'Aperitivos (Fernet)',
-    href2:'Whisky',
-    href3:'Vodkas'},
+    subcategoria:'Todos los Destilados',
+    subcategoria1 :'Fernet',
+    subcategoria2:'Whisky',
+    subcategoria3:'Vodkas',
+    id:'4'},
 
     {title:'Combos',
-    href1 : 'De cervezas',
-    href2:'Fernet',
-    href3:'Vodka'},
+    subcategoria:'Todos los Combos',
+    subcategoria1 :'De cervezas',
+    subcategoria2:'Fernet',
+    subcategoria3:'Vodka',
+    id:'5'},
   
 
 ]
 
 export const CartWidget = () => {
+    //      <Badge bg="secondary">9</Badge>       
     return( 
     <li key='shopping-cart' className='nav-links' id='cart-widget'> 
-         <a href=""></a> 
-         <i className="fas fa-shopping-cart"></i>
+      <i className="fas fa-shopping-cart"></i>
     </li>)
 }

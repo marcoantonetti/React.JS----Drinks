@@ -8,13 +8,13 @@ import Container from 'react-bootstrap/Container'
 import { Nav } from 'react-bootstrap'
 import {CartWidget, dropdowns} from './MenuItems'
 import './NavBar.css'
+import { Link, NavLink } from 'react-router-dom'
 
 export default function NavBar() {
   return (
     <Navbar bg="dark" expand="lg" variant='dark' className='letras'>
     <Container fluid>
-    <Navbar.Brand href="#">Drinks</Navbar.Brand>
-    <i class="fas fa-cocktail"></i>
+    <Link to='/'><Navbar.Brand >Drinks</Navbar.Brand><i class="fas fa-cocktail"></i></Link>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
@@ -24,11 +24,13 @@ export default function NavBar() {
       >
         {dropdowns.map((item, index)=>{
           return(
-            <NavDropdown title={item.title} id="navbarScrollingDropdown">
-            <NavDropdown.Item href={item.href1}>{item.href1}</NavDropdown.Item>
-            <NavDropdown.Item href={item.href2}>{item.href2}</NavDropdown.Item>
-            <NavDropdown.Item href={item.href3}>{item.href3}</NavDropdown.Item>
-            </NavDropdown>)
+          <NavDropdown key={item.id} title={item.title} id="navbarScrollingDropdown">
+          <NavDropdown.Item  ><NavLink to={`/subcategoria/${item.title}`}>{item.subcategoria}</NavLink></NavDropdown.Item>
+          <NavDropdown.Item  ><NavLink to={`/subcategoria/${item.subcategoria1}`}>{item.subcategoria1}</NavLink></NavDropdown.Item>
+           <NavDropdown.Item ><NavLink to={`/subcategoria/${item.subcategoria2}`}>{item.subcategoria2}</NavLink></NavDropdown.Item>
+           <NavDropdown.Item ><NavLink to={`/subcategoria/${item.subcategoria3}`}>{item.subcategoria3}</NavLink></NavDropdown.Item>
+            </NavDropdown>
+            )
         })}
 
       </Nav>

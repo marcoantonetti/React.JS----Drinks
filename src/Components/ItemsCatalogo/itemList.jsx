@@ -1,12 +1,18 @@
 
-
+// Agregar URL, Agregar Stock
+import quilmes_imagen from 'D:/Code/React/Drinks/drinks/src/image/quilmes.png'
+import otro_loco_mas from 'D:/Code/React/Drinks/drinks/src/image/otro loco mas.png'
+import shofferhofer from 'D:/Code/React/Drinks/drinks/src/image/shofferhofer.png'
+import vino_toro from 'D:/Code/React/Drinks/drinks/src/image/vino toro.png'
+import red_label from 'D:/Code/React/Drinks/drinks/src/image/red label.png'
+import smirnoff from 'D:/Code/React/Drinks/drinks/src/image/smirnoff.png'
 export const productos = [
-    {id: 1, categoria: 'cervezas', subcategoria: 'nacional', img:'drinks\public\quilmes.png', title:'Quilmes Six Pack', price:'380'},
-    {id: 2, categoria: 'cervezas', subcategoria: 'importada', img:'drinks\public\quilmes.png', title:'Hoeffleganger', price:'700'},
-    {id: 3, categoria: 'vino', subcategoria: 'rosado', img:'drinks\public\quilmes.png', title:'Uno Mas', price:'400'},
-    {id: 4, categoria: 'vino', subcategoria: 'blanco', img:'drinks\public\quilmes.png', title:'Vino Toro', price:'200'},
-    {id: 5, categoria: 'destilado', subcategoria: 'whisky', img:'drinks\public\quilmes.png', title:'Red Label', price:'2000'},
-    {id: 6, categoria: 'destilado', subcategoria: 'vodka', img:'drinks\public\quilmes.png', title:'Smirnoff', price:'700'},
+    {id:'1', categoria: 'Cervezas', subcategoria: 'Industriales', img: quilmes_imagen, title:'Quilmes Six Pack', price:'380', href:'/Quilmes'},
+    {id:'2', categoria: 'Cervezas', subcategoria: 'Importadas', img:shofferhofer, title:'ShofferHofer', price:'700', href:'/Hoeffleganger'},
+    {id:'3', categoria: 'Vinos', subcategoria: 'Tintos', img: otro_loco_mas, title:'Otro Loco Mas', price:'400', href:'/Otro_Loco_Mas'},
+    {id:'4', categoria: 'Vinos', subcategoria: 'Blancos', img: vino_toro, title:'Vino Toro', price:'200', href:'/Vino_Toro'},
+    {id:'5', categoria: 'Destilados', subcategoria: 'Whisky', img: red_label, title:'Red Label', price:'2000', href:'/Red_Label'},
+    {id:'6', categoria: 'Destilados', subcategoria: 'Vodkas', img: smirnoff, title:'Smirnoff', price:'700', href:'/Smirnoff'},
 ]
 
 // Simulacion de delay de busqueda de datos de una Api
@@ -19,11 +25,11 @@ const getFetch = new Promise((resolve, reject) =>{
     if(fectchIsSuccesful){
         setTimeout(()=>{
             resolve(productos)
-        }, 3000)
+        }, 1500)
     }else{
         setTimeout(()=>{
             reject('ERROR: 404 NOT FOUND')
-        }, 3000)
+        }, 1500)
     }
 },
 )

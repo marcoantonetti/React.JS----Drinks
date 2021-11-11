@@ -1,19 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
-import React, { Component, useState } from 'react'
 import NavBar from './Components/NavBar/NavBar';
 import ItemListConteiner from './Components/ItemsCatalogo/ItemListConteiner';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import ItemDetailContainer from './Components/ItemsCatalogo/ItemDetail/itemDetailContainer';
+import { useParams } from 'react-router';
 
 function App() {
 
-      
+      const categoria = useParams()
   return (
-    <div>
+      <BrowserRouter>
+      <div className='App'>
+
       <NavBar/>
-      <ItemListConteiner bienvenida='Nuestro Catalogo'/>
-    </div>
+      <Routes>
+
+      <Route exact path='/' element={<ItemListConteiner bienvenida='Nuestro Catalogo'/>}/>
+      <Route exact path='/subcategoria/:subcategoryID' element={<ItemListConteiner bienvenida={categoria}/>}/>
+      <Route exact path='/categoria/:categoryID' element={<ItemListConteiner bienvenida={categoria}/>}/>
+      <Route exact path='/detail/:id' element={<ItemDetailContainer/>}/>
+      <Route exact path='/cart/' />
+
+
+
+      </Routes>
+      </div>
+      </BrowserRouter>
   )
 }
 

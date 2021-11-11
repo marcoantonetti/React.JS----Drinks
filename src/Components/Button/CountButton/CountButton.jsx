@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './CountButton.css'
 
 export default function CountButton({initial, stock}) {
@@ -8,7 +8,7 @@ export default function CountButton({initial, stock}) {
     let bool = false
 
     function sumCount(){
-        count < stock ?  setCount(count+1) : alert('Superaste el limite de stock')
+        count < stock ?  setCount(count+1): bool=true
     }
 
     function restCount(){

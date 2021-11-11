@@ -1,14 +1,14 @@
 import React from 'react'
 import  Card  from 'react-bootstrap/Card'
 import  Button from 'react-bootstrap/Button'
-import {useParams, Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-export default function Items(props) {
+export default function ItemDetail(props) {
 
-    const {img,title,price,ID} = props
+    const {img,title,price,categoria,subcategoria} = props
 
-    return (   
-
+    return (
+        
         <Card style={{ width: '18rem'  }}>
             <Card.Img variant="top" src={img}  />
             <Card.Body>
@@ -16,11 +16,9 @@ export default function Items(props) {
                 <Card.Text>
                      ${price}
                 </Card.Text>
-                <Link to={`/detail/${ID}`}>
-                <Button variant="success" >$ Comprar </Button>
+                <Link to={`/cart/`}><Button variant="warning" > <i className="fas fa-shopping-cart"></i> Agregar al Carrito  </Button>
                 </Link>
             </Card.Body>
-        </Card>
-         )  
-        
+        </Card>      
+    )
 }
