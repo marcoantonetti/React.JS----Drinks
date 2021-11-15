@@ -8,7 +8,6 @@ import { useParams } from 'react-router';
 
 function App() {
 
-      const categoria = useParams()
   return (
       <BrowserRouter>
       <div className='App'>
@@ -17,8 +16,8 @@ function App() {
       <Routes>
 
       <Route exact path='/' element={<ItemListConteiner bienvenida='Nuestro Catalogo'/>}/>
-      <Route exact path='/subcategoria/:subcategoryID' element={<ItemListConteiner bienvenida={categoria}/>}/>
-      <Route exact path='/categoria/:categoryID' element={<ItemListConteiner bienvenida={categoria}/>}/>
+      <Route exact path='/subcategoria/:subcategoryID' element={<ItemListConteiner />}/>
+      <Route exact path='/categoria/:categoryID' element={<ItemListConteiner />}/>
       <Route exact path='/detail/:id' element={<ItemDetailContainer/>}/>
       <Route exact path='/cart/' />
 

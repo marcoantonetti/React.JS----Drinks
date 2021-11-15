@@ -14,6 +14,7 @@ export default function ItemListConteiner(props) {
     const {subcategoryID} = useParams()
     const {categoryID} = useParams()
 
+
     useEffect(() => {
 
        // Si esta definido, filtrar mi categoria
@@ -46,11 +47,11 @@ export default function ItemListConteiner(props) {
         }
               
              
-    }, [categoryID])
+    }, [categoryID,subcategoryID])
     
     return (
         <div>
-            <h1>{props.bienvenida}</h1>
+            <h1>Nuestro Catalogo</h1>
             {loading ? <div class="spinner-border" role="status">
                         <span class="visually-hidden">Loading...</span>
                         </div> : 
