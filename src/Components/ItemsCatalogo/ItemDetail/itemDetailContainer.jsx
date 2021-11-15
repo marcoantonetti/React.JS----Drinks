@@ -26,9 +26,12 @@ export default function ItemDetailContainer() {
     
     return (
         <div>
-            <ItemDetail title={detalleItem.title} img={detalleItem.img} price={detalleItem.price}
+             {loading ? <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span> 
+                        </div>:
+                        <ItemDetail title={detalleItem.title} img={detalleItem.img} price={detalleItem.price}
                         subcategoria={detalleItem.subcategoria} categoria={detalleItem.categoria}/>
-            
+             }
         </div>
     )
 }

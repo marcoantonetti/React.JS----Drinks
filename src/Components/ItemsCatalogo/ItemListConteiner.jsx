@@ -9,7 +9,8 @@ import { useParams } from 'react-router-dom'
 export default function ItemListConteiner(props) {
 
     const [products, setProductos] = useState([])
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(true) // Para que simule cargar al inicio. Y que termine cuando el fectch haya hecho su resolve
+    const [tituloCatalogo, setTituloCatalogo] = useState('')
 
     const {subcategoryID} = useParams()
     const {categoryID} = useParams()
@@ -22,14 +23,17 @@ export default function ItemListConteiner(props) {
         getFetch//then((resolve)=>{resolve.json()}) No pongo el json porque no es una API es solo una simulacion. Array productos ya es un obj JS no un obj JSON
         .then((resolve)=>{
             console.log('Llamada a API por categoria')
-            setProductos(resolve.filter(item => item.subcategoria===subcategoryID))})
+            setProductos(resolve.filter(item => item.subcategoria===subcategoryID))
+            setTituloCatalogo(` de ${subcategoryID}`)})
         .catch((err)=>{console.log('ERROR: ' + err)})
         .finally(() => {setLoading(false)}) 
 
        } else if (categoryID) {getFetch//then((resolve)=>{resolve.json()}) No pongo el json porque no es una API es solo una simulacion. Array productos ya es un obj JS no un obj JSON
        .then((resolve)=>{
            console.log('Llamada a API por categoria')
-           setProductos(resolve.filter(item => item.categoria===categoryID))})
+           setProductos(resolve.filter(item => item.categoria===categoryID))
+           setTituloCatalogo(`de ${categoryID}`)
+        })
        .catch((err)=>{console.log('ERROR: ' + err)})
        .finally(() => {setLoading(false)}) 
 }
@@ -50,12 +54,13 @@ export default function ItemListConteiner(props) {
     }, [categoryID,subcategoryID])
     
     return (
-        <div>
-            <h1>Nuestro Catalogo</h1>
-            {loading ? <div class="spinner-border" role="status">
-                        <span class="visually-hidden">Loading...</span>
+        <div>   <h1>Nuestro Catalogo {tituloCatalogo}</h1>
+                {loading ? <div class="spinner-border" role="status">
+                            <span class="visually-hidden">Loading...</span>
                         </div> : 
-                         products.map((prod,index) => <Items key={index} price={prod.price} title={prod.title} img={prod.img} ID={prod.id}/> )  }                                
+                        <div>
+                         {products.map((prod,index) => <Items key={index} price={prod.price} title={prod.title} img={prod.img} ID={prod.id}/> )} 
+                         </div>  }                                
 
         </div>
     )
