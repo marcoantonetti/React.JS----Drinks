@@ -12,4 +12,7 @@
 
 }
 
-
+.navLinkNavBar{
+    align-self: stretch;
+    color: red;
+}

@@ -26,7 +26,7 @@ export default function NavBar() {
           return(
           <NavDropdown key={item.id} title={item.title} id="navbarScrollingDropdown">
           <NavDropdown.Item  ><NavLink to={`/categoria/${item.title}`}>{item.subcategoria}</NavLink></NavDropdown.Item>
-          <NavDropdown.Item  ><NavLink to={`/subcategoria/${item.subcategoria1}`}>{item.subcategoria1}</NavLink></NavDropdown.Item>
+          <NavLink className='navLinkNavBar' to={`/subcategoria/${item.subcategoria1}`}><NavDropdown.Item  >{item.subcategoria1}</NavDropdown.Item></NavLink>
            <NavDropdown.Item ><NavLink to={`/subcategoria/${item.subcategoria2}`}>{item.subcategoria2}</NavLink></NavDropdown.Item>
            <NavDropdown.Item ><NavLink to={`/subcategoria/${item.subcategoria3}`}>{item.subcategoria3}</NavLink></NavDropdown.Item>
             </NavDropdown>

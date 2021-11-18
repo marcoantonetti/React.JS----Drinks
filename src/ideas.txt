@@ -9,3 +9,12 @@ Al pedo hacer otra promise en itemdetail. Desps de entregar sacalo y usa el mism
 
 Al clikear la foto que aparezca un modal del item con informacion del item
 Al clickear comprar que se vaya al carrito de ese item
+
+Que al clikear en navbardropdown me lleve a ese link. Y no solo clikenado las palabras azules. 
+Me recomendaron encerrar el dropdown dentro de navlinks. Pero si hago esto directamente no funciona
+Podria intentar poner un evento, .onClick en dropdown que link = el que necesite
+
+Hacer abstracciones para que la legibilidad de tus componentes sean mas profesionales
+
+En los casos de abstraccion de la clase de eventos hay buenos ejemplos para hacer un select. 
+Asi haces un select de tamano del fernet y en base a ese tamano cambia el precio por ejemplo. Y bueno por stock issues

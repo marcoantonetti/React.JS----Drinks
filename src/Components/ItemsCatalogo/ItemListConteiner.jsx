@@ -60,7 +60,8 @@ export default function ItemListConteiner(props) {
                         </div> : 
                         <div>
                          {products.map((prod,index) => <Items key={index} price={prod.price} title={prod.title} img={prod.img} ID={prod.id}/> )} 
-                         </div>  }                                
+                         </div>  } 
+                                                        
 
         </div>
     )

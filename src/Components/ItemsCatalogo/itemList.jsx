@@ -7,12 +7,12 @@ import vino_toro from 'D:/Code/React/Drinks/drinks/src/image/vino toro.png'
 import red_label from 'D:/Code/React/Drinks/drinks/src/image/red label.png'
 import smirnoff from 'D:/Code/React/Drinks/drinks/src/image/smirnoff.png'
 export const productos = [
-    {id:'1', categoria: 'Cervezas', subcategoria: 'Industriales', img: quilmes_imagen, title:'Quilmes Six Pack', price:'380', href:'/Quilmes'},
-    {id:'2', categoria: 'Cervezas', subcategoria: 'Importadas', img:shofferhofer, title:'ShofferHofer', price:'700', href:'/Hoeffleganger'},
-    {id:'3', categoria: 'Vinos', subcategoria: 'Tintos', img: otro_loco_mas, title:'Otro Loco Mas', price:'400', href:'/Otro_Loco_Mas'},
-    {id:'4', categoria: 'Vinos', subcategoria: 'Blancos', img: vino_toro, title:'Vino Toro', price:'200', href:'/Vino_Toro'},
-    {id:'5', categoria: 'Destilados', subcategoria: 'Whisky', img: red_label, title:'Red Label', price:'2000', href:'/Red_Label'},
-    {id:'6', categoria: 'Destilados', subcategoria: 'Vodkas', img: smirnoff, title:'Smirnoff', price:'700', href:'/Smirnoff'},
+    {id:'1', categoria: 'Cervezas', subcategoria: 'Industriales', img: quilmes_imagen, title:'Quilmes Six Pack', price:'380', stock:11},
+    {id:'2', categoria: 'Cervezas', subcategoria: 'Importadas', img:shofferhofer, title:'ShofferHofer', price:'700', stock:11},
+    {id:'3', categoria: 'Vinos', subcategoria: 'Tintos', img: otro_loco_mas, title:'Otro Loco Mas', price:'400', stock:11},
+    {id:'4', categoria: 'Vinos', subcategoria: 'Blancos', img: vino_toro, title:'Vino Toro', price:'200',stock:11},
+    {id:'5', categoria: 'Destilados', subcategoria: 'Whisky', img: red_label, title:'Red Label', price:'2000',stock:11},
+    {id:'6', categoria: 'Destilados', subcategoria: 'Vodkas', img: smirnoff, title:'Smirnoff', price:'700', stock:11},
 ]
 
 // Simulacion de delay de busqueda de datos de una Api

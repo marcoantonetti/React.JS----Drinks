@@ -30,7 +30,7 @@ export default function ItemDetailContainer() {
                         <span class="visually-hidden">Loading...</span> 
                         </div>:
                         <ItemDetail title={detalleItem.title} img={detalleItem.img} price={detalleItem.price}
-                        subcategoria={detalleItem.subcategoria} categoria={detalleItem.categoria}/>
+                        stock={detalleItem.stock}/>
              }
         </div>
     )
