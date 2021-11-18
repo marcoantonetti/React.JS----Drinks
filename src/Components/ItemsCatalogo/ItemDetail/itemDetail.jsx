@@ -14,9 +14,11 @@ export default function ItemDetail(props) {
     const {img,title,price,stock} = props
     const [value, setValue] = useState(1)
     const [bool, setBool] = useState(true)
+    const [precioTotal, setPrecioTotal]= useState(parseInt(price) * value)
 
     function countButtonValue(value){
         setValue(value)
+        setPrecioTotal(parseInt(price) * value)
     }
 
   
@@ -27,7 +29,7 @@ export default function ItemDetail(props) {
                 <Card.Title>{title}</Card.Title> 
                 stock: {stock - value} 
                 <Card.Text>
-                     ${parseInt(price) * value}
+                     ${precioTotal}
                 </Card.Text>
                 {bool ? <><CountButton initial={1} stock={stock-1} onAdd={countButtonValue}/>
                           <Button  onClick={()=>setBool(false)} variant="warning" > <i className="fas fa-shopping-cart"></i> Agregar al Carrito  </Button></>
